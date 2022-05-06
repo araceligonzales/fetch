@@ -1,0 +1,1 @@
+const createProfile = require('./src/profile-template');
