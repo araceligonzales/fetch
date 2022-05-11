@@ -1,24 +1,24 @@
-const { Model, Datatypes, INTEGER, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
 class User extends Model {
   // need to add hashing for password
-  checkpassword(loginPW) {
-    return bcrypt.compareSync(loginPW, this.password);
-  }
+  // checkpassword(loginPW) {
+  //   return bcrypt.compareSync(loginPW, this.password);
+  // }
 }
 
 User.init(
   {
     id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     username: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -26,14 +26,14 @@ User.init(
       },
     },
     first_name: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isAlphanumeric: true,
       },
     },
     last_name: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -63,25 +63,25 @@ User.init(
     // Should split table for cleaner code
     // Split after MVP created
     pet_type: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     pet_name: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isAlphanumeric: true,
       },
     },
     pet_age: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         isNumeric: true,
       },
     },
     pet_traits: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
@@ -98,21 +98,21 @@ User.init(
     // },
   },
   {
-    hooks: {
-      // password hooks
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
+    // hooks: {
+    //   // password hooks
+    //   async beforeCreate(newUserData) {
+    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+    //     return newUserData;
+    //   },
 
-      async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      },
-    },
+    //   async beforeUpdate(updatedUserData) {
+    //     updatedUserData.password = await bcrypt.hash(
+    //       updatedUserData.password,
+    //       10
+    //     );
+    //     return updatedUserData;
+    //   },
+    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,

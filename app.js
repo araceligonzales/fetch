@@ -1,9 +1,18 @@
-const createProfile = require('./src/profile-template');
-const express = require('express')
+// const createProfile = require('./src/profile-template');
+const express = require("express");
+const exphbs = require("express-handlebars");
 
-const app = express()
+const app = express();
+const PORT = process.env.PORT || 3001;
 
+const sequelize = require("./config/connection");
 
-sequelize.sync({ force: true }).then(() => {
+const hbs = exphbs.create({});
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+
+app.use(require("./controllers/"));
+
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
