@@ -1,8 +1,22 @@
 const User = require('./User')
 const Pet = require('./Pet')
 
-// User
+// // User
+// User.hasMany(Pet, {
+//   foreignKey: 'pet_id'
+// })
 
-// Pet
+// User.belongsTo(Pet, {
+//   foreignKey: 'user_id'
+// })
+
+// // Pet
+// Pet.hasMany(User, {
+//   foreignKey: 'user_id'
+// })
+
+// Pet.belongsTo(User, {
+//   foreignKey: 'pet_id'
+// })
 
 module.exports = { User, Pet }
