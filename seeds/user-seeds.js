@@ -10,6 +10,7 @@ const userdata = [
     password: '',
     location: '',
     pet_type: '',
+    pet_name: '',
     pet_age: '',
     pet_traits: ''
   }
