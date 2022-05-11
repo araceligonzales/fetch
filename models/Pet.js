@@ -17,6 +17,32 @@ Pet.init(
       validate: {
         isAlphanumeric: true
       }
+    },
+    pet_age: {
+      type: Datatypes.INTEGER,
+      allowNull: false
+    },
+    pet_type: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
+    pet_traits: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
+    pet_bio: {
+      type: Datatypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    owner_id: {
+      type: Datatypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     }
   },
   {

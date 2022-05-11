@@ -1,8 +1,12 @@
-const { Model, Datatypes } = require('sequelize');
+const { Model, Datatypes, INTEGER, DataTypes } = require('sequelize');
 const sequelize = require("../config/connection")
+const bcrypt = require('bcrypt')
 
 class User extends Model {
   // need to add hashing for password
+  checkpassword(loginPW) {
+    return bcrypt.compareSync(loginPW, this.password)
+  } 
 }
 
 User.init(
@@ -51,6 +55,29 @@ User.init(
         len: [4],
       },
     },
+    // could use a location library to match users within 50 mi
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // Should split table for cleaner code
+    // Split after MVP created
+    pet_name: {
+      type: Datatypes.STRING,
+      allowNull: false,
+    },
+    pet_age: {
+      type: Datatypes.INTEGER,
+      allowNull: false
+    },
+    pet_type: {
+      type: Datatypes.STRING,
+      allowNull: false
+    },
+    pet_traits: {
+      type: Datatypes.STRING,
+      allowNull: false
+    }
   },
   {
     hooks: {
