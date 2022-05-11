@@ -1,7 +1,9 @@
 const { Model, Datatypes } = require('sequelize');
 const sequelize = require("../config/connection")
 
-class User extends Model {}
+class User extends Model {
+  // need to add hashing for password
+}
 
 User.init(
   {
@@ -52,7 +54,7 @@ User.init(
   },
   {
     hooks: {
-
+      // password hooks
     },
     sequelize,
     timestamps: false,
