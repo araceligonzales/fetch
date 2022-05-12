@@ -1,6 +1,8 @@
 const User = require('./User')
 const Pet = require('./Pet')
 
+
+// will use if pet model used
 // // User
 // User.hasMany(Pet, {
 //   foreignKey: 'pet_id'
