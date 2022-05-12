@@ -1,6 +1,6 @@
- const { User } = require('sequelize')
+const { User } = require('sequelize')
  const sequelize = require('../config/connection')
- class Pet extends Model {}
+ class PetMatch extends Model {}
 
  Pet.init(
    {
