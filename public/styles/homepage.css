@@ -1,0 +1,20 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    color: white;
+    text-align: center;
+    padding: 300px 0px 300px;
+}
+
+section h2,h3  {
+    text-decoration: solid;
+    color: black;
+    font-size: xx-large;
+}
+
+section h3 {
+    font-style: italic;
+}
