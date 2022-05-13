@@ -42,6 +42,14 @@
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
+                <li>
+                    {{#if loggedIn}}
+                        <button id="logout" class="btn-no-style">logout</button>
+                    {{else}}
+                        <a href="/login">login</a>
+                    {{/if}}
+                </li>
+                    
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -53,8 +61,12 @@
   <section>
     
     {{{body}}}
-
+    
   </section>
+
   <footer>Made by pet lovers</footer>
+    {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 </html>
