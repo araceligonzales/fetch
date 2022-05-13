@@ -61,40 +61,7 @@ User.init(
     },
     // Should split table for cleaner code
     // Split after MVP created
-    // pet_type: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // pet_name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   validate: {
-    //     isAlphanumeric: true,
-    //   },
-    // },
-    // pet_age: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   validate: {
-    //     isNumeric: true,
-    //   },
-    // },
-    // pet_traits: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   validate: {
-    //     len: [1],
-    //   },
-    // },
-
-    // pet_id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   references: {
-    //     model: 'pet',
-    //     key: 'id'
-    //   }
-    // },
+   
   },
   {
     hooks: {

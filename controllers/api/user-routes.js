@@ -42,7 +42,6 @@ router.post("/", (req, res) => {
     email: req.body.email,
     password: req.body.password,
     // location: req.body.location,
-
   })
     .then((dbUserData) => {
       req.session.save(() => {
