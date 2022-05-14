@@ -4,6 +4,7 @@ const { User } = require('../models')
 const userdata = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     username: 'k',
     first_name: 'k',
     last_name: 'c',
@@ -15,6 +16,8 @@ const userdata = [
     // pet_age: '',
     // pet_traits: ''
 =======
+=======
+>>>>>>> feature/handlebars
     username: 'jacqueline',
     first_name: 'Jackqueline',
     last_name: 'S',
@@ -49,7 +52,10 @@ const userdata = [
     pet_name: '',
     pet_age: 3,
     pet_traits: ''
+<<<<<<< HEAD
 >>>>>>> c55b425f83734329e56198649f954c269900c49a
+=======
+>>>>>>> feature/handlebars
   }
 ]
 
