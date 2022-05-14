@@ -9,7 +9,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
-    <link rel="stylesheet" href="./public/styles/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Fetch!</title>
     <title>Fetch</title>
 </head>
@@ -28,21 +28,16 @@
                 <ul class="navbar-nav mr-auto">
 
                 </ul>
-                
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
 
                 {{#if loggedIn}}
-                <button id="logout" class="btn btn-outline-success my-2 my-sm-0">logout</button>
+                <button id="logout" class="btn btn-outline-success my-2 my-sm-0">Logout</button>
                 {{else}}
-                <button class="btn btn-outline-success my-2 my-sm-0 ml-2" href="/login">login</button>
+                <a class="btn btn-outline-success my-2 my-sm-0 ml-2" href="/login">Login</a>
                 {{/if}}
             </div>
         </nav>
     </header>
-    <section>
+    <section class="">
 
         {{{body}}}
 
@@ -50,15 +45,13 @@
 
     <footer class="bg-light text-center text-lg-start fixed-bottom">
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            <p class="fs-3">Made by pet lovers</p>
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+            <p class="fs-3">Made by Pet Lovers</p>
         </div>
         <!-- Copyright -->
     </footer>
     {{#if loggedIn}}
-        <script src="/javascript/logout.js"></script>
+    <script src="/javascript/logout.js"></script>
     {{/if}}
 </body>
 
