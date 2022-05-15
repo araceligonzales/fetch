@@ -1,19 +1,11 @@
 // const createProfile = require('./src/profile-template');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 const express = require("express");
 const session = require('express-session');
-=======
-const express = require('express');
+const exphbs = require("express-handlebars");
 const http = require('http').Server(app);
 const io =require('socket.io')(http);
->>>>>>> c55b425f83734329e56198649f954c269900c49a
-=======
 const path = require("path");
-const express = require("express");
-const session = require("express-session");
->>>>>>> feature/handlebars
-const exphbs = require("express-handlebars");
 
 
 app.get('/', function(req, res) {
