@@ -1,0 +1,17 @@
+<section class="hero mb-5">
+  <nav>
+    <img class="logo" src="">
+  </nav>
+  <p class="text-center">Find your best buddy a best buddy!</p>
+  <img src="images/pets.jpg" width="100%" height="auto">
+</section>
+
+<section class="text-center">
+  {{#if loggedIn}}
+  <button id="enter-button" class="btn my-2 my-sm-0">Sign Up!</button>
+  {{else}}
+  <a class="enter-button btn my-2 my-sm-0 ml-2" href="/login">Login</a>
+  {{/if}}
+</section>
+
+{{!-- <h1>welcome</h1> --}}

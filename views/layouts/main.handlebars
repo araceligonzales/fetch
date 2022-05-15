@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Fetch!</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_paw.png">
+</head>
+
+<body>
+    <header class="header">
+        <!--nav -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand logo" href="/">Fetch!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+
+                {{#if loggedIn}}
+                <button id="logout" class="btn my-2 my-sm-0">Logout</button>
+                {{else}}
+                <a class="btn my-2 my-sm-0 ml-2" href="/login">Login</a>
+                {{/if}}
+            </div>
+        </nav>
+    </header>
+    <section class="">
+
+        {{{body}}}
+
+    </section>
+
+    <footer class="footer text-center text-lg-start fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center p-2">
+            <p class="">Made by Pet Lovers</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
