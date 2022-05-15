@@ -1,0 +1,74 @@
+* {
+  font-family: 'Permanent Marker', cursive;
+}
+
+:root {
+  --first-col: #FFA69E;
+  --second-col: #FAF3DD;
+  --third-col: #B8F2E6;
+  --fourth-col: #AED9E0;
+  --fifth-col: #5E6472;
+}
+
+/* NAV */
+.header,
+.footer {
+  background-color: var(--fourth-col);
+  color: var(--fifth-col);
+}
+
+.logo {
+  font-size: 2em;
+  text-decoration: none;
+  color: var(--fifth-col)
+}
+
+.logo:hover {
+  color: var(--first-col)
+}
+
+/* SECTION */
+section p {
+  font-size: 4em;
+  color: var(--first-col)
+}
+
+.enter-button {
+  padding: 1em 2em;
+  border-radius: 1em;
+  color: var(--fifth-col);
+  background-color: var(--first-col);
+
+}
+
+.enter-button:hover {
+  color: var(--first-col);
+  background-color: var(--third-col);
+}
+
+/* LOGIN PAGE */
+
+form {
+  background-color: var(--first-col);
+  border-radius: 1em;
+}
+
+form div {
+  margin: 0.5em;
+}
+
+.btn-outline-success {
+  color: var(--fifth-col);
+  background-color: var(--second-col);
+  border-color: var(--second-col);
+}
+
+.btn-outline-success:hover {
+  color: var(--fifth-col);
+  background-color: var(--fourth-col);
+  border-color: var(--second-col);
+}
+
+.btn-outline-success::after {
+  background-color: var(--first-col);
+}
